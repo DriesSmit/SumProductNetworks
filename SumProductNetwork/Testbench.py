@@ -64,7 +64,7 @@ full_prob_dist[5] = [0, 1, 0, 1, 0.522]
 full_prob_dist[6] = [0, 1, 1, 0, 0.348]
 full_prob_dist[7] = [0, 1, 1, 1, 0.870]
 full_prob_dist[8] = [1, 0, 0, 0, 0.000]
-full_prob_dist[9] = [1, 0, 0, 1, 0.078]
+full_prob_dist[9] = [1.0, 0.0, 0.0, 1.0, 0.078]
 full_prob_dist[10] = [1, 0, 1, 0, 0.052]
 full_prob_dist[11] = [1, 0, 1, 1, 0.130]
 full_prob_dist[12] = [1, 1, 0, 0, 0.000]
@@ -75,7 +75,7 @@ full_prob_dist[15] = [1, 1, 1, 1, 1.000]
 for index in range(len(full_prob_dist)):
     variables = full_prob_dist[index][:4]
     infer_val = spn.eval(variables)
-    if round(infer_val,3) == full_prob_dist[index][4]:
+    if round(infer_val,16) == full_prob_dist[index][4]:
         total_score += 1
         total += 1
     else:
