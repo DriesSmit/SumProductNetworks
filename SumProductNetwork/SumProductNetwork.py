@@ -3,7 +3,7 @@
 import numpy as np
 class SPN:
     def __init__(self):
-        print("I am created!")
+        pass
 
     def setStructure(self, network, variables):
         self.input_values = variables
@@ -17,11 +17,13 @@ class SPN:
         # Run every node in the network
         for net_depth in range(len(self.network)):
             for node_index in range(len(self.network[net_depth])):
-                print(net_depth," ",node_index," ",self.network[net_depth][node_index].calc_value())
+                self.network[net_depth][node_index].calc_value()
         return self.network[len(self.network)-1][0].get_value()
 
     # def fit(self, data):
     #     pass
+    def get(self, data):
+        pass
     #
     # def findStructure(self, data):
     #     pass
