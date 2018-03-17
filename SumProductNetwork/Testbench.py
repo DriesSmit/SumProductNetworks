@@ -28,7 +28,7 @@ m2 = opp_multi(name = "m2",inherit=[p2,p3])
 network.append((m1, m2))
 
 # The final plus operator
-p4 = opp_sum(name = "p1",inherit=[m1,m2],probs=[0.3, 0.7])
+p4 = opp_sum(name ="p1", inherit=[m1,m2],probs=[0.3, 0.7])
 network.append([p4])
 
 spn.setStructure(network=network, variables = [n_x1, x1, n_x2, x2])
