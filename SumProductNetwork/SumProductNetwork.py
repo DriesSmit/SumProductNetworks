@@ -156,7 +156,7 @@ class opp_multi():
                 self.inherit.append((parent.get_value_point(), 0))
             elif len(parent) == 2:
                 # This is a variable [pointer, index]
-                self.inherit.append(parent[0].get_value_point(), parent[1])
+                self.inherit.append((parent[0].get_value_point(), parent[1]))
             else:
                 raise ValueError('To many input parameters from one parent. Found: ', len(parent))
 
