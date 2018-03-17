@@ -30,9 +30,6 @@ class SPN:
             cur_want = want[index]
             variable = self.variables[self.varMap[cur_want]]
 
-            print("Variable: ", index, ". Variable current index: ", variable.get_true_value(), ". Variable size: ",
-                  variable.get_size())
-
             var_index = variable.get_true_value() + 1
             if var_index < variable.get_size():
                 variable.set_true_value(var_index)
@@ -59,10 +56,6 @@ class SPN:
                     if index != cur_given[1]:
                         variable.set_value(index, 0.0)
             den_value = self.get_prob()
-        print("Denominator value: ", den_value)
-
-        print("Values: ", self.variables[0].get_value_point(), "\n", self.variables[1].get_value_point())
-
         # Calculate the numerator
 
         # Init all the wanted values and calculate the number of rows in the table
@@ -79,7 +72,6 @@ class SPN:
         prob_table = np.zeros((num_rows, num_cols))
 
         # Populate the probability table
-        print("Num rows: ", num_rows)
         for row_index in range(num_rows):
             for col_index, cur_want in enumerate(want):
                 variable = self.variables[self.varMap[cur_want]]
@@ -87,21 +79,6 @@ class SPN:
             prob_table[row_index][num_cols-1] = self.get_prob()/den_value
             self.increment_variables(want)
         return prob_table
-
-
-    # def fit(self, data):
-    #     pass
-    # def get(self, data):
-    #     pass
-    #
-    # def findStructure(self, data):
-    #     pass
-    #
-    # def loadNetwork(self, filename = ""):
-    #     pass
-    #
-    # def saveNetwork(self, filename = ""):
-    #     pass
 
 class variable():
     def __init__(self,name="", size = 2):
