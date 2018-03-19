@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+            <state relative-caret-position="463">
+              <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -23,13 +23,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SumProductNetwork.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SumProductNetwork.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SumProductNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="158" column="77" lean-forward="false" selection-start-line="158" selection-start-column="77" selection-end-line="158" selection-end-column="77" />
+            <state relative-caret-position="278">
+              <caret line="215" column="93" lean-forward="false" selection-start-line="215" selection-start-column="93" selection-end-line="215" selection-end-column="93" />
               <folding>
-                <element signature="e#4061#5068#0" expanded="false" />
+                <element signature="e#93#111#0" expanded="true" />
+                <element signature="e#169#239#0" expanded="false" />
+                <element signature="e#282#417#0" expanded="false" />
+                <element signature="e#457#483#0" expanded="false" />
+                <element signature="e#535#968#0" expanded="false" />
+                <element signature="e#1016#1169#0" expanded="false" />
+                <element signature="e#3087#4500#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -38,8 +44,8 @@
       <file leaf-file-name="Testbench.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Testbench.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="358">
+              <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="35" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -60,20 +66,25 @@
     <findStrings>
       <find>input_va</find>
       <find>set_true</find>
+      <find>get_prob</find>
+      <find>opp_sum</find>
+      <find>== opp</find>
+      <find>update</find>
+      <find>update_weights</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Testbench.py" />
-        <option value="$PROJECT_DIR$/SumProductNetwork.py" />
         <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/SumProductNetwork.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="334" />
-    <option name="y" value="56" />
+    <option name="x" value="262" />
+    <option name="y" value="49" />
     <option name="width" value="683" />
     <option name="height" value="677" />
   </component>
@@ -202,13 +213,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1366" height="713" extended-state="6" />
+    <frame x="0" y="-4" width="1920" height="1025" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17878787" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12593383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34641638" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2260579" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -230,7 +241,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -250,7 +261,13 @@
         <state relative-caret-position="75">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="e#4061#5068#0" expanded="false" />
+            <element signature="e#93#111#0" expanded="true" />
+            <element signature="e#169#239#0" expanded="false" />
+            <element signature="e#282#417#0" expanded="false" />
+            <element signature="e#457#483#0" expanded="false" />
+            <element signature="e#535#968#0" expanded="false" />
+            <element signature="e#1016#1169#0" expanded="false" />
+            <element signature="e#3087#4500#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -280,7 +297,13 @@
         <state relative-caret-position="75">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="e#4061#5068#0" expanded="false" />
+            <element signature="e#93#111#0" expanded="true" />
+            <element signature="e#169#239#0" expanded="false" />
+            <element signature="e#282#417#0" expanded="false" />
+            <element signature="e#457#483#0" expanded="false" />
+            <element signature="e#535#968#0" expanded="false" />
+            <element signature="e#1016#1169#0" expanded="false" />
+            <element signature="e#3087#4500#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -310,7 +333,13 @@
         <state relative-caret-position="75">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="e#4061#5068#0" expanded="false" />
+            <element signature="e#93#111#0" expanded="true" />
+            <element signature="e#169#239#0" expanded="false" />
+            <element signature="e#282#417#0" expanded="false" />
+            <element signature="e#457#483#0" expanded="false" />
+            <element signature="e#535#968#0" expanded="false" />
+            <element signature="e#1016#1169#0" expanded="false" />
+            <element signature="e#3087#4500#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -350,7 +379,13 @@
         <state relative-caret-position="75">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="e#4061#5068#0" expanded="false" />
+            <element signature="e#93#111#0" expanded="true" />
+            <element signature="e#169#239#0" expanded="false" />
+            <element signature="e#282#417#0" expanded="false" />
+            <element signature="e#457#483#0" expanded="false" />
+            <element signature="e#535#968#0" expanded="false" />
+            <element signature="e#1016#1169#0" expanded="false" />
+            <element signature="e#3087#4500#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -370,7 +405,13 @@
         <state relative-caret-position="1005">
           <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
           <folding>
-            <element signature="e#4061#5068#0" expanded="false" />
+            <element signature="e#93#111#0" expanded="true" />
+            <element signature="e#169#239#0" expanded="false" />
+            <element signature="e#282#417#0" expanded="false" />
+            <element signature="e#457#483#0" expanded="false" />
+            <element signature="e#535#968#0" expanded="false" />
+            <element signature="e#1016#1169#0" expanded="false" />
+            <element signature="e#3087#4500#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -385,8 +426,18 @@
     <entry file="file://$PROJECT_DIR$/../../Skripsie/AutoTestMarker/Software/PGM.py" />
     <entry file="file://$PROJECT_DIR$/Testbench.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="358">
+          <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
@@ -395,20 +446,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SumProductNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="158" column="77" lean-forward="false" selection-start-line="158" selection-start-column="77" selection-end-line="158" selection-end-column="77" />
+        <state relative-caret-position="278">
+          <caret line="215" column="93" lean-forward="false" selection-start-line="215" selection-start-column="93" selection-end-line="215" selection-end-column="93" />
           <folding>
-            <element signature="e#4061#5068#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#93#111#0" expanded="true" />
+            <element signature="e#169#239#0" expanded="false" />
+            <element signature="e#282#417#0" expanded="false" />
+            <element signature="e#457#483#0" expanded="false" />
+            <element signature="e#535#968#0" expanded="false" />
+            <element signature="e#1016#1169#0" expanded="false" />
+            <element signature="e#3087#4500#0" expanded="false" />
           </folding>
         </state>
       </provider>
