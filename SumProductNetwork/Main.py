@@ -6,39 +6,35 @@ spn = SPN()
 # Initialize variables
 x1 = variable(name='x1', size=2)
 x2 = variable(name='x2', size=2)
-x3 = variable(name='x3', size=2)
-spn.addVar((x1, x2, x3))
+spn.addVar((x1, x2))
 
 # The multiply operators
-m1 = opp_multi(inherit=[(x2, 0), (x3, 0)])
-m2 = opp_multi(inherit=[(x2, 1), (x3, 1)])
-m3 = opp_multi(inherit=[(x2, 0), (x3, 1)])
-m4 = opp_multi(inherit=[(x2, 1), (x3, 0)])
-spn.addNodes((m1, m2, m3, m4))
-
-# The plus operators
-p1 = opp_sum(inherit=[m1, m2], probs=[None, None])  # 0.5 0.5
-p2 = opp_sum(inherit=[m3, m4], probs=[None, None])  # 0.5 0.5
-spn.addNodes((p1, p2))
-
-# The multiply operators
-m5 = opp_multi(inherit=[(x1, 0), p1])
-m6 = opp_multi(inherit=[p2, (x1, 1)])
-spn.addNodes((m5, m6))
+m1 = opp_multi(inherit=[(x1,0), (x2,0)])
+m2 = opp_multi(inherit=[(x1,1), (x2,1)])
+spn.addNodes((m1, m2))
 
 # The final plus operator
-p3 = opp_sum(inherit=[m5, m6], probs=[None, None]) # 0.5 0.5
-spn.addNodes([p3])
+p1 = opp_sum(inherit=[m1, m2], probs=[0.3, 0.7])
+spn.addNodes([p1])
+
+#   +--------------+
+#   |  x1  x2  p   |
+#   |  0   0  0.3  |
+#   |  0   1  0.0  |
+#   |  1   0  0.0  |
+#   |  1   1  0.7  |
+#   +--------------+
 
 data = []
-data.append((('x1',0), ('x2',0), ('x3', 0)))
-data.append((('x1',0), ('x2',1), ('x3', 1)))
-data.append((('x1',1), ('x2',0), ('x3', 1)))
-data.append((('x1',1), ('x2',1), ('x3', 0)))
+for i in range(3):
+    data.append((('x1',0), ('x2',0)))
+
+for i in range(7):
+    data.append((('x1',1), ('x2',1)))
 
 spn.fit(data, method = "GD", num_epochs = 100, alpha=0.1)
 
-want = ['x1', 'x2', 'x3']
+want = ['x1', 'x2']
 given = []
 
 print("The probabilities is:\n\n", spn.eval(want = want, given = given))

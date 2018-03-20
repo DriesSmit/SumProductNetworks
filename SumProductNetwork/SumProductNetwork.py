@@ -213,7 +213,7 @@ class opp_sum():
 
         # Update the weights of the sum node
         for index in range(len(self.probs)):
-            self.probs[index] += alpha * self.weight_sum[index] / num_data # Why is this += ?
+            self.probs[index] -= alpha * self.weight_sum[index] / num_data
 
             if self.probs[index] <= 0.0:
                 self.probs[index] = 0.0000001
