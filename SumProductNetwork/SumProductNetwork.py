@@ -16,7 +16,6 @@ class SPN:
     def addNodes(self,layer):
         self.network.append(layer)
 
-
     def increment_variables(self, want):
         adding = True
         index = len(want)-1
@@ -55,6 +54,9 @@ class SPN:
                 # Backwards pass
                 first_grad = 1/answer # Moet daar nie teen deel deur nul beskerm word nie?
                 self.network[len(self.network) - 1][0].pass_gradient(first_grad)
+                #print("Network sum weights: ", self.network[len(self.network) - 1][0].weight_sum)
+                #print("Network input x1: ", self.variables[0].get_value_point())
+                #print("Network weights: ", self.network[len(self.network) - 1][0].probs)
 
             # Update the weights for this epoch
             for net_depth in range(len(self.network)):
@@ -70,7 +72,6 @@ class SPN:
             self.gradient_decent(data, num_epochs=num_epochs, alpha = alpha)
 
         print("Final weights: ", self.network[len(self.network) - 1][0].probs)
-
 
     def run_network(self):
         # Run every node in the network
@@ -136,7 +137,8 @@ class variable():
     def set_value(self,index, value):
         self.value[index] = value
 
-        if value >0.01:
+        if value >0.01 and self.value_index != index:
+            self.value[self.value_index] = 0.0
             self.value_index = index
 
     # This value will be wrong if there is more that one non zero value in the variable.
@@ -186,12 +188,11 @@ class opp_sum():
     def init_probs(self):
         sum_probs = 0.0
         for index in range(len(self.probs)):
-            self.probs[index] = random.random()
+            self.probs[index] = 0.5
+            #random.random()
             sum_probs += self.probs[index]
         for index in range(len(self.probs)):
             self.probs[index] /= sum_probs
-
-
 
     def calc_value(self):
         self.total[0] = 0.0
@@ -205,18 +206,23 @@ class opp_sum():
         #print("At sum node: ", value, " ", self.total[0])
         for index in range(len(self.inherit)):
             self.weight_sum[index] += value * self.inherit[index][0].get_value_point()[self.inherit[index][1]]
-            pre_node_grad = value * self.probs[index]
-            self.inherit[index][0].pass_gradient(pre_node_grad)
+            self.inherit[index][0].pass_gradient(value * self.probs[index])
 
     def update_weights(self, num_data=10, alpha=0.1):
         sum_of_probs = 0.0
-
+        print("Probabilities before: ", self.probs)
+        print("Sum weights: ", self.weight_sum)
         # Update the weights of the sum node
+
+        gradients = self.weight_sum / num_data
+
+        update_values = (gradients) - np.mean(gradients)
+
         for index in range(len(self.probs)):
-            self.probs[index] -= alpha * self.weight_sum[index] / num_data
+            self.probs[index] += alpha * update_values[index] # Want to reach maximum likelihood
 
             if self.probs[index] <= 0.0:
-                self.probs[index] = 0.0000001
+                self.probs[index] = 0.0
 
             sum_of_probs += self.probs[index]
             self.weight_sum[index] = 0.0
@@ -226,7 +232,7 @@ class opp_sum():
         for index in range(len(self.probs)):
             self.probs[index] /= sum_of_probs
 
-
+        print("Probabilities after: ", self.probs)
 
 class opp_multi():
     def __init__(self,inherit = []):
